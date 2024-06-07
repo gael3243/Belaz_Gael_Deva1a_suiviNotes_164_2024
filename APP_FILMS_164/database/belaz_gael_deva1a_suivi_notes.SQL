@@ -50,7 +50,13 @@ INSERT INTO `t_apprenti` (`id_apprennti`, `nom_apprenti`, `prenom_apprenti`, `fi
 (4, 'Nava', 'Justin', 'Operateur', 2018),
 (5, 'Moore', 'William', 'Exploitation', 2021),
 (6, 'Angelo', 'Mary', 'Developpement', 2017),
-(7, 'Freed', 'Diane', 'Operateur', 2017);
+(7, 'Freed', 'Diane', 'Operateur', 2017),
+(22, 'Morin', 'Sebastien', 'Developpement', 2021),
+(23, 'Desforges', 'Ines', 'Reseau', 2017),
+(24, 'Rouze', 'Lothair', 'Operateur', 2011),
+(25, 'Authier', 'Marie', 'Developpement', 2010),
+(26, 'Lepicie', 'Talbot', 'Operateur', 2122);
+
 
 -- --------------------------------------------------------
 

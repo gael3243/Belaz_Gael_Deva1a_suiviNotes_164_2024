@@ -188,7 +188,7 @@ def notes_update_wtf():
                 UPDATE t_notes
                 SET notes = %(value_notes)s,
                     fk_apprenti = %(value_fk_apprenti)s, 
-                    fk_matiere = %(value_fk_apprenti)s, 
+                    fk_matiere = %(value_fk_matiere)s, 
                     fk_typeNotes = %(value_fk_typeNotes)s
                 WHERE id_notes = %(value_id_notes)s
             """
