@@ -13,7 +13,7 @@ from APP_FILMS_164.database.database_tools import DBconnection
 from APP_FILMS_164.erreurs.exceptions import *
 from APP_FILMS_164.films.gestion_films_wtf_forms import FormWTFUpdateFilm, FormWTFAddFilm, FormWTFDeleteFilm
 
-
+"""Inutilisé """
 @app.route("/films_afficher/<int:id_film_sel>", methods=['GET', 'POST'])
 def films_afficher(id_film_sel):
     print("films_afficher id_film_sel ", id_film_sel)

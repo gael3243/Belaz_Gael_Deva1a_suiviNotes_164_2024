@@ -24,7 +24,7 @@ from APP_FILMS_164.erreurs.exceptions import *
                  id_genre_sel = "n" affiche le film dont l'id est "n"
                  
 """
-
+"""Inutilisé """
 
 @app.route("/films_genres_afficher/<int:id_film_genres_sel>", methods=['GET', 'POST'])
 def films_genres_afficher(id_film_genres_sel):

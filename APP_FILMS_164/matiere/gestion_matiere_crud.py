@@ -59,10 +59,10 @@ def matiere_afficher(order_by, id_matiere_sel):
 
                 # Différencier les messages si la table est vide.
                 if not data_genres and id_matiere_sel == 0:
-                    flash("""La table "t_genre" est vide. !!""", "warning")
+                    flash("""La table "t_matière" est vide. !!""", "warning")
                 elif not data_genres and id_matiere_sel > 0:
                     # Si l'utilisateur change l'id_genre dans l'URL et que le genre n'existe pas,
-                    flash(f"Le genre demandé n'existe pas !!", "warning")
+                    flash(f"La matière demandée n'existe pas !!", "warning")
                 else:
                     # Dans tous les autres cas, c'est que la table "t_genre" est vide.
                     # OM 2020.04.09 La ligne ci-dessous permet de donner un sentiment rassurant aux utilisateurs.
@@ -269,8 +269,8 @@ def matiere_delete_wtf():
                     mconn_bd.execute(str_sql_delete_films_genre, valeur_delete_dictionnaire)
                     mconn_bd.execute(str_sql_delete_idgenre, valeur_delete_dictionnaire)
 
-                flash(f"Genre définitivement effacé !!", "success")
-                print(f"Genre définitivement effacé !!")
+                flash(f"Matière définitivement effacé !!", "success")
+                print(f"Matière définitivement effacé !!")
 
                 # afficher les données
                 return redirect(url_for('matiere_afficher', order_by="ASC", id_matiere_sel=0))

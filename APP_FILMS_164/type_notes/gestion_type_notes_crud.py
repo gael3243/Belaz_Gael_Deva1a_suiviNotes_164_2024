@@ -2,6 +2,8 @@
 Fichier : gestion_genres_crud.py
 Auteur : OM 2021.03.16
 """
+
+
 from pathlib import Path
 
 from flask import redirect
@@ -57,10 +59,10 @@ def type_notes_afficher(order_by, id_type_notes_sel):
 
                 # Différencier les messages si la table est vide.
                 if not data_genres and id_type_notes_sel == 0:
-                    flash("""La table "t_suivi" est vide. !!""", "warning")
+                    flash("""La table "t_type_notes" est vide. !!""", "warning")
                 elif not data_genres and id_type_notes_sel > 0:
                     # Si l'utilisateur change l'id_genre dans l'URL et que le genre n'existe pas,
-                    flash(f"Le suivi demandé n'existe pas !!", "warning")
+                    flash(f"Le type de note demandé n'existe pas !!", "warning")
                 else:
                     # Dans tous les autres cas, c'est que la table "t_genre" est vide.
                     # OM 2020.04.09 La ligne ci-dessous permet de donner un sentiment rassurant aux utilisateurs.
@@ -245,7 +247,7 @@ def type_notes_delete_wtf():
                     return redirect(url_for("type_notes_afficher", order_by="ASC", id_type_notes_sel=0))
 
                 print("data_films_attribue_genre_delete ", data_films_attribue_genre_delete)
-                flash(f"Effacer le genre de façon définitive de la BD !!!", "danger")
+                flash(f"Effacer le type de notes de façon définitive de la BD !!!", "danger")
                 btn_submit_del = True
 
             if form_delete.submit_btn_del.data:

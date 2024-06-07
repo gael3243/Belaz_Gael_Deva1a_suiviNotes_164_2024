@@ -60,11 +60,11 @@ def type_matiere_afficher(order_by, id_type_matiere_sel):
                     flash("""La table "t_genre" est vide. !!""", "warning")
                 elif not data_genres and id_type_matiere_sel > 0:
                     # Si l'utilisateur change l'id_genre dans l'URL et que le genre n'existe pas,
-                    flash(f"Le genre demandé n'existe pas !!", "warning")
+                    flash(f"Le type de matière demandé n'existe pas !!", "warning")
                 else:
                     # Dans tous les autres cas, c'est que la table "t_genre" est vide.
                     # OM 2020.04.09 La ligne ci-dessous permet de donner un sentiment rassurant aux utilisateurs.
-                    flash(f"Données genres affichés !!", "success")
+                    flash(f"Données type matière affichés !!", "success")
 
         except Exception as Exception_type_matiere_afficher:
             raise ExceptionGenresAfficher(f"fichier : {Path(__file__).name}  ;  "
@@ -260,8 +260,8 @@ def type_matiere_delete_wtf():
                     mconn_bd.execute(str_sql_delete_films_genre, valeur_delete_dictionnaire)
                     mconn_bd.execute(str_sql_delete_idgenre, valeur_delete_dictionnaire)
 
-                flash(f"Genre définitivement effacé !!", "success")
-                print(f"Genre définitivement effacé !!")
+                flash(f"Type de matière définitivement effacé !!", "success")
+                print(f"Type de matière définitivement effacé !!")
 
                 # afficher les données
                 return redirect(url_for('type_matiere_afficher', order_by="ASC", id_type_matiere_sel=0))

@@ -261,7 +261,7 @@ def suivi_delete_wtf():
                     return redirect(url_for("suivi_afficher", order_by="ASC", id_suivi_sel=0))
 
                 print("data_films_attribue_genre_delete ", data_films_attribue_genre_delete)
-                flash(f"Effacer le genre de façon définitive de la BD !!!", "danger")
+                flash(f"Effacer le suivi de façon définitive de la BD !!!", "danger")
                 btn_submit_del = True
 
             if form_delete.submit_btn_del.data:
