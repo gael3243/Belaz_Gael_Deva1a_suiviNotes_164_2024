@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Ajouter un GENRE (WTF) {% endblock %}
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				Ajouter un nouvel apprenti (WTForms)
+			</p>
+			<form action="" method="POST" novalidate>
+				<!-- Protection contre les attaques Cross-Site Request Forgery (CSRF) -->
+				{{ form.hidden_tag() }}
+				<div class="form-group">
+					<p>
+						{{ form.nom_apprenti_wtf.label }}<br>
+						{{ form.nom_apprenti_wtf(size=32) }}<br>
+						{% for error in form.nom_apprenti_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
+					</p>
+					<p>
+						{{ form.prenom_apprenti_wtf.label }}<br>
+						{{ form.prenom_apprenti_wtf(size=32) }}<br>
+						{% for error in form.prenom_apprenti_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
+					</p>
+					<p>
+						{{ form.filiere_apprenti_wtf.label }}<br>
+						{{ form.filiere_apprenti_wtf(size=32) }}<br>
+						{% for error in form.filiere_apprenti_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
+					</p>
+					<p>
+						{{ form.ordonance_apprenti_wtf.label }}<br>
+						{{ form.ordonance_apprenti_wtf(size=32) }}<br>
+						{% for error in form.ordonance_apprenti_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
+					</p>
+				</div>
+				{{ form.submit(class="btn btn-primary") }}
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
